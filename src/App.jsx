@@ -45,7 +45,6 @@ const App = () => {
       <main className="container my-4">
         <ProductList products={products} onShowDetails={handleShowDetails} /> {/* Llamar al nuevo componente */}
       </main>
-      <Users />
       <Footer />
       {selectedProduct && (
         <ProductModal
