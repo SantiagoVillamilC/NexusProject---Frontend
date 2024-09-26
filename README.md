@@ -2,6 +2,14 @@
 
 Este proyecto es el frontend de **Project Nexus**, una aplicación dedicada a la gestión y optimización de recursos tecnológicos. Utiliza React y Vite para ofrecer una experiencia de usuario interactiva y moderna.
 
+## Instalación
+
+Para instalar las dependencias, utiliza el siguiente comando:
+
+```bash
+npm install
+```
+
 ## Uso
 
 Para iniciar la aplicación, ejecuta:
@@ -64,11 +72,4 @@ El proyecto utiliza varias dependencias para facilitar el desarrollo y mejorar l
 - **Sequelize**: `sequelize`: "^6.37.3"  
   ORM para Node.js que facilita la interacción con bases de datos SQL.
 
-## Instalación
-
-Para instalar las dependencias, usa el siguiente comando:
-
-```bash
-npm install
-```
 
