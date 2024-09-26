@@ -2,6 +2,14 @@
 
 Este proyecto es el frontend de **Project Nexus**, una aplicación dedicada a la gestión y optimización de recursos tecnológicos. Utiliza React y Vite para ofrecer una experiencia de usuario interactiva y moderna.
 
+## Uso
+
+Para iniciar la aplicación, ejecuta:
+
+```bash
+npm run dev
+```
+
 ## Descripción General
 
 El frontend de **Project Nexus** se encarga de la visualización y gestión de productos tecnológicos. Los usuarios pueden:
@@ -63,10 +71,4 @@ Para instalar las dependencias, usa el siguiente comando:
 ```bash
 npm install
 ```
-## Uso
 
-Para iniciar la aplicación, ejecuta:
-
-```bash
-npm run dev
-```
