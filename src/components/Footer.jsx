@@ -8,7 +8,7 @@ const Footer = () => {
         <Row>
           <Col>
             <p>&copy; {new Date().getFullYear()} Project Nexus, hecho por Santiago V.</p>
-            <p><a href="https://github.com/SantiagoVillamilC/Project-Nexus" target="_blank">Repositorio de GitHub</a></p>
+            <p><a href="https://github.com/SantiagoVillamilC/NexusProject---Frontend" target="_blank">Repositorio de GitHub</a></p>
           </Col>
         </Row>
       </Container>
