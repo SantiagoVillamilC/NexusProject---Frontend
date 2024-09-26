@@ -20,12 +20,12 @@ const ProductModal = ({ show, handleClose, product }) => {
   return (
     <Modal show={show} onHide={handleClose} centered>
       <Modal.Header closeButton>
-        <Modal.Title>{product.name}</Modal.Title>
+        <Modal.Title>{product.nombre}</Modal.Title>
       </Modal.Header>
       <Modal.Body>
-        <img src={product.image} alt={product.name} className="img-fluid mb-3" />
-        <p><strong>Precio:</strong> ${product.price}</p>
-        <p><strong>Descripcion:</strong> {product.description}</p>
+        <img src={product.imagen} alt={product.nombre} className="img-fluid mb-3" />
+        <p><strong>Precio:</strong> ${product.precio}</p>
+        <p><strong>Descripcion:</strong> {product.descripcion}</p>
 
         <Form onSubmit={handleCommentSubmit}>
           <Form.Group controlId="comment">
