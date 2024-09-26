@@ -1,0 +1,39 @@
+.custom-navbar {
+  background-color: #48C7FE;
+  padding: 15px 0; /* Ajusta el padding vertical */
+}
+
+.site-name {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 1.5rem;
+  color: #fff;
+}
+
+.navbar-brand:hover {
+  color: #BC32FE;
+}
+
+.navbar-nav {
+  margin-left: auto;
+}
+
+.navbar-light .navbar-nav .nav-link {
+  color: #fff;
+}
+
+.navbar-light .navbar-nav .nav-link:hover {
+  color: #BC32FE;
+}
+
+button {
+  background-color: #BC32FE;
+  border: none;
+  color: white;
+  padding: 8px 16px;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #9e28d8;
+}
