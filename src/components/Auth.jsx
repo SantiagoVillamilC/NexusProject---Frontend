@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import axios from 'axios';
 import { useUser } from '../userContext.jsx';
 import '../styles/Auth.css';
-import Register from './Register.jsx'; // Importar el componente Register
+import Register from './Register.jsx';
 
 const Auth = ({ closeModal, onLoginSuccess }) => {
     const [showRegister, setShowRegister] = useState(false);
@@ -41,8 +41,8 @@ const Auth = ({ closeModal, onLoginSuccess }) => {
             setError('Todos los campos son obligatorios');
             return false;
         }
-        if (contraseña.length < 3) { // Asegúrate de que la contraseña tenga al menos 6 caracteres
-            setError('La contraseña debe tener al menos 6 caracteres');
+        if (contraseña.length < 3) {
+            setError('La contraseña debe tener al menos 3 caracteres');
             return false;
         }
         return true;

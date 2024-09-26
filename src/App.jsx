@@ -1,23 +1,17 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './App.css'
+import { useState } from 'react';
+import reactLogo from './assets/react.svg';
+import viteLogo from '/vite.svg';
+import './App.css';
 
-
-import Header from './components/Header'
-import 'bootstrap/dist/css/bootstrap.min.css'
+import Header from './components/Header';
+import 'bootstrap/dist/css/bootstrap.min.css';
 import ProductList from './components/ProductList';
 import ProductModal from './components/ProductModal';
 import Footer from './components/Footer';
-import Users from './components/Users'
-import Auth from './components/Auth'
-
-
-
+import Users from './components/Users';
+import { UserProvider } from './userContext';
 
 const App = () => {
-  // Estado para el usuario
-  const [user, setUser] = useState(null); // Esto para sin usuario
   const [showModal, setShowModal] = useState(false);
   const [selectedProduct, setSelectedProduct] = useState(null);
 
@@ -47,49 +41,13 @@ const App = () => {
     setSelectedProduct(null);
   };
 
-  // Maneja el inicio de sesión del usuario
-  const handleLogin = () => {
-    setUser({ name: 'Anonimo', photo: 'https://via.placeholder.com/50' });
-  };
-
-  // Maneja el cierre de sesión del usuario
-  const handleLogout = () => {
-    setUser(null);
-  };
-
-  // Maneja la actualización del perfil del usuario
-  const handleUpdateProfile = (name, photo) => {
-    setUser({ ...user, name, photo });
-  };
-
-
-  const [isAuthModalOpen, setAuthModalOpen] = useState(false);
-
-  const handleLoginSuccess = (usuario) => {
-    console.log('Usuario logueado:', usuario);
-    // Aquí puedes guardar el usuario en el estado global o en localStorage
-  };
   return (
-    <div>
-      <Header
-        user={user}
-        onLogin={handleLogin}
-        onLogout={handleLogout}
-        onUpdate={handleUpdateProfile}
-      />
+    <UserProvider>
+      <Header />
       <main className="container my-4">
         <ProductList products={products} onShowDetails={handleShowDetails} />
       </main>
       <Users />
-
-      {/* <button onClick={() => setAuthModalOpen(true)}>Iniciar Sesión</button>
-
-      {isAuthModalOpen && (
-        <Auth
-          closeModal={() => setAuthModalOpen(false)}
-          onLoginSuccess={handleLoginSuccess}
-        />
-      )} */}
       <Footer />
       {selectedProduct && (
         <ProductModal
@@ -98,7 +56,7 @@ const App = () => {
           product={selectedProduct}
         />
       )}
-    </div>
+    </UserProvider>
   );
 };
 
