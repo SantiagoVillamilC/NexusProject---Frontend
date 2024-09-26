@@ -67,4 +67,6 @@ npm install
 
 Para iniciar la aplicación, ejecuta:
 
-- **npm run dev**
+```bash
+npm run dev
+```
